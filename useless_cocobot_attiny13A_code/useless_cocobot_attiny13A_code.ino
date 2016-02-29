@@ -11,12 +11,12 @@ void setup() {
 void loop() {
   sv = digitalRead(sw);
   if (pv != sv){
-    if (sv == 1){
-     for (byte pos=0;pos<180;pos++){
+    if (sv == 0){
+     for (byte pos=0;pos<90;pos++){
         pulseOut(s,pos);        
       }
     }else{
-      for (byte pos=180;pos>0;pos--){
+      for (byte pos=90;pos>0;pos--){
         pulseOut(s,pos);        
       }
     }
